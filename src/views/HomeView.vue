@@ -14,7 +14,7 @@
       <div class="home-section-heading">A little bit about us...</div>
       <div class="content-box" style="display: flex; flex-direction: column;">
         <p>Hey there!</p>
-        <p>We are a new NYC-based grassroots community for Resisting Automated Disempowerment (RAD) caused by AI and Big Tech. We launch this month on July 11. If you want to check out the vibes first-hand, please register to our first official event using the link above and pull up!</p>
+        <p>We are a new NYC-based grassroots community for Resisting Automated Disempowerment (RAD) caused by AI and Big Tech. We launch this month on July 11. If you want to check out the vibes firsthand, please register for our first official event using the link above and pull up!</p>
         <p><strong>Join us to help shape a future worth living in!</strong></p>
         <p style="text-align: center;">You can read more <a href="/about">here</a>.</p>
         <img class="doodle-divider" src="/hr-doodle.svg" alt=""/>
