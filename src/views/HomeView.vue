@@ -3,7 +3,8 @@
     <div class="home-top">
       <div class="home-section" id="get-involved">
         <div class="home-section-heading">Get involved!</div>
-        <LinkTree/>
+        <!-- <LinkTree/> -->
+        <Announcement/>
       </div>
       <!-- <div class="calendar-section">
         <div class="home-section-heading">Upcoming events</div>
@@ -27,6 +28,7 @@
 
 <script setup>
   import LinkTree from '@/components/LinkTree.vue'
+  import Announcement from '@/components/Announcement.vue'
 </script>
 
 <style scoped lang="scss">
@@ -62,7 +64,6 @@
     font-size: 24px;
   }
 }
-
 .content-box {
   display: flex;
   flex-direction: column;
