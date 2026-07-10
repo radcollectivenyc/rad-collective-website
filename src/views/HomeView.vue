@@ -1,15 +1,12 @@
 <template>
   <div id="home">
-    <div class="home-top">
-      <div class="home-section" id="get-involved">
-        <div class="home-section-heading">Get involved!</div>
-        <!-- <LinkTree/> -->
-        <Announcement/>
-      </div>
-      <!-- <div class="calendar-section">
-        <div class="home-section-heading">Upcoming events</div>
-          <iframe src="..." style="border:solid 1px #777" width="550" height="200" frameborder="0" scrolling="no"></iframe>
-      </div> -->
+    <div class="home-section" id="get-involved">
+      <div class="home-section-heading">Get involved!</div>
+      <Announcement/>
+    </div>
+    <div class="home-section" id="get-involved">
+      <div class="home-section-heading">More upcoming events</div>
+      <iframe id="google-calendar" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&mode=AGENDA&src=MGRjNmViYmRjMzZhOGI3YjBjOGQyYTMzMzIzYzA5MWRhMjc3ZTMyODQxYmQ3MzFmNThiYWI2OWQ2NGQyNjk2NkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23FF5E2B" style="border:solid 1px #777" frameborder="0" scrolling="no"></iframe>
     </div>
     <div class="home-section" id="learn-more">
       <div class="home-section-heading">A little bit about us...</div>
@@ -43,21 +40,6 @@
   flex-direction: column;
   gap: 64px;
 }
-.home-top {
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
-}
-.calendar-section {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  iframe {
-    max-width: 100%;
-  }
-}
 .home-section {
   display: flex;
   flex-direction: column;
@@ -65,6 +47,10 @@
   .home-section-heading {
     font-size: 24px;
   }
+}
+#google-calendar {
+  width: 100%;
+  height: 400px;
 }
 .content-box {
   display: flex;
