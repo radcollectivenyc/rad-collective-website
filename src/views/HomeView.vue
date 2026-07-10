@@ -18,10 +18,12 @@
         <p>We are a new NYC-based grassroots community for Resisting Automated Disempowerment (RAD) caused by AI and Big Tech. We launch this month on July 11. If you want to check out the vibes firsthand, please register for our first official event using the link above and pull up!</p>
         <p><strong>Join us to help shape a future worth living in!</strong></p>
         <p style="text-align: center;">You can read more <a href="/about">here</a>.</p>
-        <img class="doodle-divider" src="/hr-doodle.svg" alt=""/>
-        <p style="max-width: 320px; text-align: center; margin: auto">Our website is <i>always</i> under construction! We are continuing to add content to the site as we grow this community.</p>
-        <img style="margin: auto;" src="@/assets/hammer.gif" alt=""/>
+        <!-- <img class="doodle-divider" src="/hr-doodle.svg" alt=""/> -->
       </div>
+    </div>
+    <div class="home-section">
+      <img style="margin: auto;" src="@/assets/hammer.gif" alt=""/>
+      <p style="max-width: 320px; text-align: center; margin: auto">Our website is <i>always</i> under construction! We are continuing to add content to the site as we grow this community.</p>
     </div>
   </div>
 </template>
@@ -39,7 +41,7 @@
   line-height: 1.6;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 64px;
 }
 .home-top {
   display: flex;

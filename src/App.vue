@@ -103,14 +103,14 @@ header {
     gap: 8px;
     align-items: center;
     a.header-nav-link {
-      height: 32px;
+      height: 36px;
+      font-size: 16px;
       font-weight: bold;
       color: black;
       background: var(--color-orange-light);
       padding: 4px 8px;
       border-bottom: 2px solid rgba(0, 0, 0, 0.1);
       border-radius: 4px;
-      margin-bottom: 1px;
       &:hover {
         filter: brightness(0.95)
       }
