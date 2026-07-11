@@ -51,7 +51,7 @@
 	width: fit-content;
 	height: 36px;
 	font-size: 16px;
-  font-weight: bold;
+	font-weight: bold;
 	text-align: center;
 	color: black;
 	background: var(--color-orange-light);

@@ -1,7 +1,6 @@
 <template>
   <header>
     <div class="header-logo-container">
-      
       <img class="header-logo" src="@/assets/rad_logo_text.svg" alt="RAD Collective logo"/>
     </div>
     <div class="header-nav-desktop">
@@ -9,6 +8,7 @@
         <RouterLink class="header-nav-link" to="/">HOME</RouterLink>
         <RouterLink class="header-nav-link" to="/about">ABOUT US</RouterLink>
         <RouterLink class="header-nav-link" to="/blog">BLOG</RouterLink>
+        <RouterLink class="header-nav-link" to="/htmlDay2026">HTML DAY 2026</RouterLink>
       </nav>
       <div class="header-nav-desktop-icons">
         <a v-for="icon in socialMediaIcons" class="social-media-icon" :href="icon.url" target="_blank" :alt="icon.name" :title="icon.name">
@@ -25,6 +25,8 @@
         <hr>
         <RouterLink class="header-nav-link" to="/about" @click="hideMobileNav()">ABOUT US</RouterLink>
         <hr>
+        <RouterLink class="header-nav-link" to="/htmlDay2026" @click="hideMobileNav()">HTML DAY 2026</RouterLink>
+        <hr>
         <RouterLink class="header-nav-link" to="/blog" @click="hideMobileNav()">BLOG</RouterLink>
         <hr>
         <div class="header-nav-mobile-icons">
@@ -35,15 +37,17 @@
       </div>
     </div>
   </header>
-  <div id="router-view-container">
-    <RouterView/>
-  </div>
-  <footer>
+  <div id="page-content">
+    <div id="router-view-container">
+      <RouterView/>
+    </div>
+    <footer>
     <div class="skyline-img-container">
       <img class="skyline-img" src="@/assets/nyc_skyline.png" alt="NYC skyline pixel art" />
     </div>
     <div id="copyright-statement">RAD Collective © 2026</div>
   </footer>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -82,18 +86,13 @@ header {
 .header-logo-container {
   margin-right: 32px;
   aspect-ratio: 23/5;
-
-  // temp styles for text logo
   display: flex;
-
-
   .header-logo {
     height: 100%;
     width: 100%;
     margin-left: 10px;
   }
 }
-
 .header-nav-desktop {
   display: flex;
   flex-grow: 1;
@@ -200,8 +199,17 @@ header {
   }
 }
 
-#router-view-container {
+#page-content {
+  position: relative;
+  width: 100%;
+  height: calc(100svh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
   margin-top: 80px;
+}
+#router-view-container {
   padding: 32px;
 }
 
@@ -222,7 +230,7 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   header {
     padding: 8px;
   }

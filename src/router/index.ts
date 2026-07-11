@@ -4,6 +4,7 @@ import AboutView from '@/views/AboutView.vue'
 import BlogView from '@/views/BlogView.vue'
 import CallingAllMembersArticle from '@/views/blog/CallingAllMembersArticle.vue'
 import NycGrassrootsAiSafetyArticle from '@/views/blog/NycGrassrootsAiSafetyArticle.vue'
+import HtmlDay2026 from '@/views/HtmlDay2026.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,6 +23,11 @@ const router = createRouter({
       path: '/blog',
       name: 'blog',
       component: BlogView,
+    },
+    {
+      path: '/htmlDay2026',
+      name: 'html-day-2026',
+      component: HtmlDay2026,
     },
     {
       path: '/blog/calling-all-members',
