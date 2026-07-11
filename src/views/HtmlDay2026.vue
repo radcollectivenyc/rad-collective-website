@@ -7,11 +7,11 @@
 			<div><strong>HTML Day 2026</strong></div>
 			<div>Join us at the waterfront and write some HTML!</div>
 			<div>
-				<div class="event-detail"><img class="icon" alt="calendar icon" :src="`/icons/calendar-days.svg`">Friday, Aug 7, 6-8 pm</div>
+				<div class="event-detail"><img class="icon" alt="calendar icon" :src="`/icons/calendar-days.svg`">Friday, Aug 7, 6-8 PM</div>
 				<div class="event-detail"><img class="icon" alt="location dot icon" :src="`/icons/location-dot.svg`">Pier A Park, Hoboken</div>
 			</div>
 			<div>
-				HTML Day is an celebration of HTML conceived by <a href="https://html.energy/">html.energy</a> and organized independently across the globe by other individuals and groups.
+				HTML Day is a celebration of HTML conceived by <a href="https://html.energy/">html.energy</a> and organized independently across the globe by other individuals and groups.
 			</div>
 			<div>We're hosting this event because we think learning and writing HTML can be empowering and we love the indie web! And of course, it's a good excuse to hang out in physical space. The internet can still be alive if we make it so.</div>
 			<div><strong>No HTML experience required!</strong></div>
