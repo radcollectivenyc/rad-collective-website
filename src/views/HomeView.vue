@@ -6,7 +6,14 @@
     </div>
     <div class="home-section" id="get-involved">
       <div class="home-section-heading">More upcoming events</div>
-      <iframe id="google-calendar" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&mode=AGENDA&src=MGRjNmViYmRjMzZhOGI3YjBjOGQyYTMzMzIzYzA5MWRhMjc3ZTMyODQxYmQ3MzFmNThiYWI2OWQ2NGQyNjk2NkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23FF5E2B" style="border:solid 1px #777" frameborder="0" scrolling="no"></iframe>
+      <iframe id="calendar"
+        src="https://luma.com/embed/calendar/cal-sw8QA8WDE2Uz9J4/events"
+        frameborder="0"
+        style="border: 1px solid #bfcbda88; border-radius: 4px;"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
     </div>
     <div class="home-section" id="learn-more">
       <div class="home-section-heading">A little bit about us...</div>
@@ -48,9 +55,10 @@
     font-size: 24px;
   }
 }
-#google-calendar {
+#calendar {
   width: 100%;
   height: 400px;
+  background: black;
 }
 .content-box {
   display: flex;
