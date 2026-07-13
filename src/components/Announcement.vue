@@ -1,18 +1,23 @@
 <template>
-	<section class="announcement">
-		<h2>Soft Launch Picnic {{'<'}}3</h2>
-		<p>Join us for our <b>Soft Launch Picnic</b> this weekend! Open to all, no technical background required. Bring a snack (optional) and let's hang!</p>
-		<div class="event-detail">
-			<img alt="calendar icon" :src="`/icons/calendar-days.svg`">
-			<div>Saturday, July 11, 4:00 PM</div>
+	<section v-if="isEventUpcoming" class="announcement">
+		<h2>HTML Day 2026!</h2>
+		<p>Join us at the waterfront and write some HTML! <RouterLink class="morelink" to="/htmlDay2026">learn more</RouterLink></p>
+		<div>
+			<div class="event-detail"><img class="icon" alt="calendar icon" :src="`/icons/calendar-days.svg`">Friday, Aug 7, 6-8 PM</div>
+			<div class="event-detail"><img class="icon" alt="location dot icon" :src="`/icons/location-dot.svg`">Pier A Park, Hoboken</div>
 		</div>
-		<div class="event-detail">
-			<img alt="location dot icon" :src="`/icons/location-dot.svg`">
-			<div>Tompkins Sqaure Park, NYC</div>
-		</div>
-		<a class="rsvp-button" target="_blank" href="https://luma.com/8mqj0joe">RSVP</a>
+		<a class="rsvp-button" target="_blank" href="https://luma.com/d2xysadw">RSVP</a>
 	</section>
 </template>
+
+<script setup>
+import { RouterLink } from 'vue-router';
+
+const eventEnd = new Date('2026-08-07T20:00:00-04:00');
+// const eventEnd = new Date('2026-07-11T18:00:00-04:00');
+const isEventUpcoming = new Date() < eventEnd; 
+
+</script>
 
 <style scoped lang="scss">
 .announcement {
