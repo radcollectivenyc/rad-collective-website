@@ -16,8 +16,8 @@
 }
 
 body {
-  background: var(--color-bg);
   min-height: 100svh;
+  background: var(--color-bg);
   line-height: 1.6;
   font-family:
     Inter,
@@ -37,9 +37,6 @@ body {
 
 #app {
   height: 100svh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   font-weight: normal;
   margin: 0 auto;
 }

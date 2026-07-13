@@ -25,9 +25,9 @@
         <hr>
         <RouterLink class="header-nav-link" to="/about" @click="hideMobileNav()">ABOUT US</RouterLink>
         <hr>
-        <RouterLink class="header-nav-link" to="/htmlDay2026" @click="hideMobileNav()">HTML DAY 2026</RouterLink>
-        <hr>
         <RouterLink class="header-nav-link" to="/blog" @click="hideMobileNav()">BLOG</RouterLink>
+        <hr>
+        <RouterLink class="header-nav-link" to="/htmlDay2026" @click="hideMobileNav()">HTML DAY 2026</RouterLink>
         <hr>
         <div class="header-nav-mobile-icons">
           <a v-for="icon in socialMediaIcons" class="social-media-icon" :href="icon.url" target="_blank" :alt="icon.name" :title="icon.name">
@@ -37,17 +37,15 @@
       </div>
     </div>
   </header>
-  <div id="page-content">
-    <div id="router-view-container">
-      <RouterView/>
-    </div>
-    <footer>
+  <div id="router-view-container">
+    <RouterView/>
+  </div>
+  <footer>
     <div class="skyline-img-container">
       <img class="skyline-img" src="@/assets/nyc_skyline.png" alt="NYC skyline pixel art" />
     </div>
     <div id="copyright-statement">RAD Collective © 2026</div>
   </footer>
-  </div>
 </template>
 
 <script setup lang="ts">
@@ -199,18 +197,10 @@ header {
   }
 }
 
-#page-content {
-  position: relative;
-  width: 100%;
-  height: calc(100svh - 80px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow-x: hidden;
-  margin-top: 80px;
-}
 #router-view-container {
+  overflow-x: hidden;
   padding: 32px;
+  margin-top: 80px;
 }
 
 footer {

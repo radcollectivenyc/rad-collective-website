@@ -96,11 +96,12 @@
 #erie-lackawanna {
 	position: absolute;
 	top: 50%;
-	width: 100%;
+	width: 330px;
 	margin: auto;
 	font-size: 5px;
 	line-height: 1;
 	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
 	color: var(--color-orange-dark);
 	pointer-events: none;
 	animation: sway 10s ease infinite;
@@ -119,9 +120,19 @@
   100% {transform: rotate(360deg);}
 }
 @keyframes sway {
-  0%   {transform: translateX(-25%) rotate(-5deg);}
-  50%  {transform: translateX(50%) rotate(5deg);}
-  100% {transform: translateX(-25%) rotate(-5deg);}
+	0% {
+		left: -25%;
+		right: unset;
+		transform: rotate(-5deg);
+	}
+	50% {
+		left: calc(125% - 330px);
+		transform: rotate(5deg);
+	}
+	100% {
+		left: -25%;
+		transform: rotate(-5deg);
+	}
 }
 .rsvp-button {
 	width: fit-content;

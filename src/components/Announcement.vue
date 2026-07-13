@@ -1,12 +1,12 @@
 <template>
 	<section v-if="isEventUpcoming" class="announcement">
-		<h2>HTML Day 2026!</h2>
-		<p>Join us at the waterfront and write some HTML! <RouterLink class="morelink" to="/htmlDay2026">learn more</RouterLink></p>
+		<h2>HTML Day 2026</h2>
+		<p>Join us at the waterfront and write some HTML!</p>
 		<div>
 			<div class="event-detail"><img class="icon" alt="calendar icon" :src="`/icons/calendar-days.svg`">Friday, Aug 7, 6-8 PM</div>
 			<div class="event-detail"><img class="icon" alt="location dot icon" :src="`/icons/location-dot.svg`">Pier A Park, Hoboken</div>
 		</div>
-		<a class="rsvp-button" target="_blank" href="https://luma.com/d2xysadw">RSVP</a>
+		<a class="announcement-button" href="https://radnyc.net/htmlDay2026">Learn more</a>
 	</section>
 </template>
 
@@ -52,7 +52,7 @@ const isEventUpcoming = new Date() < eventEnd;
 	height: 18px;
 	width: 18px;
 }
-.rsvp-button {
+.announcement-button {
 	width: fit-content;
 	height: 36px;
 	font-size: 16px;
