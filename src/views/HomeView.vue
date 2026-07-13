@@ -58,7 +58,7 @@
 #calendar {
   width: 100%;
   height: 400px;
-  background: black;
+  background: white;
 }
 .content-box {
   display: flex;
