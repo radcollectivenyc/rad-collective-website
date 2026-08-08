@@ -1,19 +1,21 @@
 <template>
 	<section v-if="isEventUpcoming" class="announcement">
-		<h2>HTML Day 2026</h2>
-		<p>Join us at the waterfront and write some HTML!</p>
+		<h2>RAD Collective Policy Meeting</h2>
+		<p>​Kicking off RAD Collective's legislative and policy efforts! Join to hear about what projects we're tackling next. 
+			<!-- <RouterLink class="morelink" to="/htmlDay2026">learn more</RouterLink> -->
+		</p>
 		<div>
-			<div class="event-detail"><img class="icon" alt="calendar icon" :src="`/icons/calendar-days.svg`">Friday, Aug 7, 6-8 PM</div>
-			<div class="event-detail"><img class="icon" alt="location dot icon" :src="`/icons/location-dot.svg`">Pier A Park, Hoboken</div>
+			<div class="event-detail"><img class="icon" alt="calendar icon" :src="`/icons/calendar-days.svg`">Wednesday, Aug 19, 6-7 PM</div>
+			<div class="event-detail"><img class="icon" alt="location dot icon" :src="`/icons/location-dot.svg`">Virtual</div>
 		</div>
-		<a class="announcement-button" href="https://radnyc.net/htmlDay2026">Learn more</a>
+		<a class="announcement-button" target="_blank" href="https://luma.com/txzi6c3i">RSVP</a>
 	</section>
 </template>
 
 <script setup>
 import { RouterLink } from 'vue-router';
 
-const eventEnd = new Date('2026-08-07T20:00:00-04:00');
+const eventEnd = new Date('2026-08-19T20:00:00-04:00');
 // const eventEnd = new Date('2026-07-11T18:00:00-04:00');
 const isEventUpcoming = new Date() < eventEnd; 
 
