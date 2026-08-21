@@ -4,10 +4,6 @@
       <div class="home-section-heading">Get involved!</div>
       <Announcement/>
     </div>
-    <div class="home-section" id="mailing-list">
-      <button @click="subscribeToMailingList('cosborn.creates@gmail.com', 'Bruh', 'Moment')">Test!</button>
-
-    </div>
     <div class="home-section" id="get-involved">
       <div class="home-section-heading">More upcoming events</div>
       <iframe id="calendar"
