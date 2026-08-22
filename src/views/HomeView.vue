@@ -1,11 +1,26 @@
 <template>
   <div id="home">
-    <div class="home-section" id="get-involved">
-      <div class="home-section-heading">Get involved!</div>
-      <Announcement/>
+    <div class="home-section" id="mailing-list">
+      <div class="home-section-heading">Keep in touch!</div>
+      <form id="mailing-list-form" @submit.prevent="subscribeToMailingList(email,first,last)">
+        <div>Subscribe to our mailing list :)</div>
+        <div class="input-container">
+          <input id="first" name="first" v-model="first" placeholder="First Name"></input>
+          <div class="form-error" v-show="attemptedSubmit && first === ''">Please let us know who you are!</div>
+        </div>
+        <div class="input-container">
+          <input id="last" name="last" v-model="last" placeholder="Last Name"></input>
+          <div class="form-error" v-show="attemptedSubmit && first && last === ''">Please give us your last name!</div>
+        </div>
+        <div class="input-container">
+          <input id="email" name="email" v-model="email" placeholder="Email Address" type="email"></input>
+          <div class="form-error" v-show="attemptedSubmit && first && last && email === ''">We need your email to email you!</div>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
     </div>
     <div class="home-section" id="get-involved">
-      <div class="home-section-heading">More upcoming events</div>
+      <div class="home-section-heading">Upcoming events</div>
       <iframe id="calendar"
         src="https://luma.com/embed/calendar/cal-sw8QA8WDE2Uz9J4/events"
         frameborder="0"
@@ -32,9 +47,21 @@
 </template>
 
 <script setup>
-  import LinkTree from '@/components/LinkTree.vue'
+  import { ref } from 'vue'
   import Announcement from '@/components/Announcement.vue'
-  import { subscribeToMailingList } from '@/api/mailchimp'
+
+  const email = ref('')
+  const first = ref('')
+  const last = ref('')
+
+  const attemptedSubmit = ref(false)
+
+  const subscribeToMailingList = (emailAddress, firstName, lastName) => {
+    attemptedSubmit.value = true;
+    if (emailAddress && firstName && lastName) {
+      window.location.href = `https://radnyc.us16.list-manage.com/subscribe/post?u=9018387db6724adec5c864ae6&id=f15ad2ec50&f_id=00351be1f0&EMAIL=${emailAddress}&FNAME=${firstName}&LNAME=${lastName}`
+    }
+  }
 </script>
 
 <style scoped lang="scss">
@@ -53,6 +80,46 @@
   gap: 16px;
   .home-section-heading {
     font-size: 24px;
+  }
+}
+#mailing-list-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .input-container {
+    width: 100%;
+    input {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid black;
+      height: 32px;
+      padding: 8px;
+    }
+    .form-error {
+      font-size: 14px;
+      color: red;
+    }
+  }
+  
+  button {
+    width: fit-content;
+    height: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    background: var(--color-orange-light);
+    padding: 4px 16px;
+    border: none;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    border-radius: 18px;
+    margin-top: 8px;
+    cursor: pointer;
+    &:hover {
+      filter: brightness(0.95)
+    }
   }
 }
 #calendar {
