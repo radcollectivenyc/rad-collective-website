@@ -8,6 +8,7 @@
         <RouterLink class="header-nav-link" to="/">HOME</RouterLink>
         <RouterLink class="header-nav-link" to="/about">ABOUT US</RouterLink>
         <RouterLink class="header-nav-link" to="/blog">BLOG</RouterLink>
+        <RouterLink class="header-nav-link" to="/power-map">POWER MAP</RouterLink>
         <RouterLink class="header-nav-link" to="/htmlDay2026">HTML DAY 2026</RouterLink>
       </nav>
       <div class="header-nav-desktop-icons">
@@ -26,6 +27,8 @@
         <RouterLink class="header-nav-link" to="/about" @click="hideMobileNav()">ABOUT US</RouterLink>
         <hr>
         <RouterLink class="header-nav-link" to="/blog" @click="hideMobileNav()">BLOG</RouterLink>
+        <hr>
+        <RouterLink class="header-nav-link" to="/power-map" @click="hideMobileNav()">POWER MAP</RouterLink>
         <hr>
         <RouterLink class="header-nav-link" to="/htmlDay2026" @click="hideMobileNav()">HTML DAY 2026</RouterLink>
         <hr>

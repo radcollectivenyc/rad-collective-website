@@ -5,6 +5,7 @@ import BlogView from '@/views/BlogView.vue'
 import CallingAllMembersArticle from '@/views/blog/CallingAllMembersArticle.vue'
 import NycGrassrootsAiSafetyArticle from '@/views/blog/NycGrassrootsAiSafetyArticle.vue'
 import HtmlDay2026 from '@/views/HtmlDay2026.vue'
+import PowerMapView from '@/views/PowerMapView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +24,11 @@ const router = createRouter({
       path: '/blog',
       name: 'blog',
       component: BlogView,
+    },
+    {
+      path: '/power-map',
+      name: 'power-map',
+      component: PowerMapView,
     },
     {
       path: '/htmlDay2026',
