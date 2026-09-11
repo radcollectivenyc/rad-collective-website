@@ -19,7 +19,7 @@
       <div class="home-section-heading">Upcoming events</div>
       <div class="events-calendar-container animated-border">
         <iframe id="calendar"
-          src="https://luma.com/embed/calendar/cal-sw8QA8WDE2Uz9J4/events"
+          src="https://luma.com/embed/calendar/cal-sw8QA8WDE2Uz9J4/events?lt=light"
           frameborder="0"
           style="border: 1px solid #bfcbda88; border-radius: 4px;"
           aria-hidden="false"
