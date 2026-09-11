@@ -27,11 +27,11 @@
         <hr>
         <RouterLink class="header-nav-link" to="/about" @click="hideMobileNav()">ABOUT US</RouterLink>
         <hr>
+        <RouterLink class="header-nav-link" to="/policy">POLICY</RouterLink>
+        <hr>
         <RouterLink class="header-nav-link" to="/blog" @click="hideMobileNav()">BLOG</RouterLink>
         <hr>
         <RouterLink class="header-nav-link" to="/power-map" @click="hideMobileNav()">POWER MAP</RouterLink>
-        <hr>
-        <RouterLink class="header-nav-link" to="/htmlDay2026" @click="hideMobileNav()">HTML DAY 2026</RouterLink>
         <hr>
         <div class="header-nav-mobile-icons">
           <a v-for="icon in socialMediaIcons" class="social-media-icon" :href="icon.url" target="_blank" :alt="icon.name" :title="icon.name">
