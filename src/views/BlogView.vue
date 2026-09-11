@@ -60,6 +60,8 @@ import { blogArticles, getExcerpt } from '@/data/blogArticles'
   .article-title {
     font-size: 18px;
     font-weight: bold;
+    color: var(--color-orange-light);
+    text-decoration: none;
   }
   .article-meta {
     font-size: 13px;

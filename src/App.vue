@@ -7,9 +7,10 @@
       <nav class="header-nav-desktop-links">
         <RouterLink class="header-nav-link" to="/">HOME</RouterLink>
         <RouterLink class="header-nav-link" to="/about">ABOUT US</RouterLink>
+        <RouterLink class="header-nav-link" to="/policy">POLICY</RouterLink>
         <RouterLink class="header-nav-link" to="/blog">BLOG</RouterLink>
         <RouterLink class="header-nav-link" to="/power-map">POWER MAP</RouterLink>
-        <RouterLink class="header-nav-link" to="/htmlDay2026">HTML DAY 2026</RouterLink>
+        <!-- <RouterLink class="header-nav-link" to="/htmlDay2026">HTML DAY 2026</RouterLink> -->
       </nav>
       <div class="header-nav-desktop-icons">
         <a v-for="icon in socialMediaIcons" class="social-media-icon" :href="icon.url" target="_blank" :alt="icon.name" :title="icon.name">
@@ -107,6 +108,7 @@ header {
       font-size: 16px;
       font-weight: bold;
       color: black;
+      text-decoration: none !important;
       background: var(--color-orange-light);
       padding: 4px 8px;
       border-bottom: 2px solid rgba(0, 0, 0, 0.1);
@@ -183,6 +185,7 @@ header {
       height: 32px;
       font-weight: bold;
       color: black;
+      text-decoration: none;
       border-radius: 4px;
       padding: 4px 8px;
       &:hover {
@@ -223,7 +226,7 @@ footer {
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 880px) {
   header {
     padding: 8px;
   }

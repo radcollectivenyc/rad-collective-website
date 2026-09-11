@@ -4,9 +4,8 @@
       <div class="section-heading">About Us</div>
       <div class="section-content">
         <p>Welcome to our site! We are so excited for you to be here, and we have so much to tell you about!</p>
-        <p>RAD Collective officially launched in July 2026. Before constructing a new group vision and starting RAD, many of our members led and volunteered their efforts for the now-defunct PauseAI NYC, a local group of PauseAI US.</p>
-        <p>So who are we? We are NYC residents and folks from the surrounding area who all share a concern about AI safety, and <u>are willing to do something about it</u>. Our leaders and members come from a variety of backgrounds including (but not limited to) software engineering, web development, political organizing, AI research, art, film, and more! There is no prerequisite to join!</p>
-        <p>Our group is growing quickly, and we would love to have you join us if you're in the area.</p>
+        <p>RAD Collective officially launched in July 2026. We are NYC residents and folks from the surrounding area who care about AI safety, democracy, and the preservation of the human experience, and <u>are willing to do something about it</u>. Our leaders and members come from a variety of backgrounds including (but not limited to) software development, AI research, engineering, political organizing, art, film, and more! There is no prerequisite to join!</p>
+        <p>Our group is growing quickly, and we would love to have you <a href="https://luma.com/calendar/manage/cal-sw8QA8WDE2Uz9J4" target="_blank">join us</a> if you're in the area.</p>
       </div>
     </div>
     <div class="section" id="what-we-do">
@@ -19,23 +18,23 @@
         <p>And in even more recent news, NY Governor Hochul has <a href="https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops" target="_blank">signed an executive order</a> to halt the construction of "hyperscale" (over 50 megawatts of energy consumption per day) data centers for one year. This will give the NY government some time to study the impacts of existing data centers and develop a better regulatory framework. While we were not directly involved in driving this executive order, some of our members have attended and spoken out at town council meetings to help oppose individual data center projects. The data center issue has really been heating up, and it's more important than ever for people to organize against the build-up of this harmful infrastructure.</p>
         <p>OK... now for the fun stuff.</p>
         <p>We meet in real life!! It's always a good time. Here is a photo from our soft launch picnic on July 11, 2026:</p>
-        <img src="@/assets/rad_launch.jpg" alt="RAD Collective soft launch picnic" style="width: 100%; border-radius: 8px;"/>
-        <p>Also, as mentioned at the top of the page, many of us have been active even before forming RAD. Here is a photo from the PauseAI NYC general meeting of April this year:</p>
-        <img src="@/assets/pause_general_apr.jpg" alt="PauseAI April 2026 general meeting at Collider" style="width: 100%; border-radius: 8px;"/>
-        <p>And we do other things too, like canvassing and interviewing people in parks across the city! Here is a pic from an interview shoot we did all the way back in winter:</p>
-        <img src="@/assets/interview_feb.jpg" alt="street interview" style="width: 100%; border-radius: 8px;"/>
+        <img src="@/assets/rad_launch.jpg" alt="RAD Collective soft launch picnic"/>
+        <p>Before constructing our own group vision and starting RAD, many of our members led and volunteered their efforts for the now-defunct PauseAI NYC. Here is a photo from that era, at a general meeting of April this year:</p>
+        <img src="@/assets/pause_general_apr.jpg" alt="PauseAI April 2026 general meeting at Collider"/>
+        <p>And we do other things too, like canvassing, tabling, and interviewing people in parks across the city! Here is a pic from a tabling sesh we did at Maria Hernandez Park on September 7, 2026:</p>
+        <img src="@/assets/20260907-tabling.webp" alt="street interview"/>
         <p>If you're interested in getting acquainted with our group, you should absolutely pull up to one of our <a href="https://luma.com/calendar/manage/cal-sw8QA8WDE2Uz9J4" target="_blank">events</a>!</p>
       </div>
     </div>
     <div class="section" id="fun-photos">
       <div class="section-heading">Additional fun photos!</div>
       <div class="section-content">
-        <p>Here are some amazin' photos of us eating pizza. Not an official club event, but we live in New York and pizza is our #1 food group:</p>
-        <img src="@/assets/pizza2.jpg" alt="members of RAD Collective eating pizza" style="width: 100%; border-radius: 8px;"/>
-        <img src="@/assets/pizza1.jpg" alt="members of RAD Collective eating pizza again" style="width: 100%; border-radius: 8px;"/>
+        <p>Here are some amazin' photos of us eating pizza. Not an official club event, but (most of us) live in New York and pizza is our #1 food group:</p>
+        <img src="@/assets/pizza2.webp" alt="members of RAD Collective eating pizza"/>
+        <img src="@/assets/pizza1.webp" alt="members of RAD Collective eating pizza again"/>
         <p><strong>Editorial note:</strong> Cameron thinks/knows that New Jersey pizza is better than New York pizza. This is not an official opinion of the group, but he will not be silenced. Please reach out if you want NJ pizza recs.</p>
         <p>Finally, we will leave you with this beautiful creature, Sunny the cat <3<3<3</p>
-        <img src="@/assets/sunny.jpg" alt="Ian's beautiful creature" style="width: 100%; border-radius: 8px;"/>
+        <img src="@/assets/sunny.jpg" alt="Ian's beautiful creature"/>
         <!-- TODO: Write the About Us content for RAD Collective.
              who we are, our mission, how people can get involved,
              and what makes our group unique. Use <p> tags for paragraphs. -->
@@ -70,6 +69,11 @@
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
     margin: 0 16px;
   }
+}
+img {
+  width: 90%;
+  border-radius: 4px;
+  margin: 16px auto;
 }
 
 @media (max-width: 768px) {

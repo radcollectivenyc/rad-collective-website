@@ -1,44 +1,55 @@
 <template>
   <div id="home">
-    <div class="home-section" id="mailing-list">
-      <div class="home-section-heading">Keep in touch!</div>
-      <form id="mailing-list-form" @submit.prevent="subscribeToMailingList(email,first,last)">
-        <div>Subscribe to our mailing list :)</div>
-        <div class="input-container">
-          <input id="first" name="first" v-model="first" placeholder="First Name"></input>
-          <div class="form-error" v-show="attemptedSubmit && first === ''">Please let us know who you are!</div>
-        </div>
-        <div class="input-container">
-          <input id="last" name="last" v-model="last" placeholder="Last Name"></input>
-          <div class="form-error" v-show="attemptedSubmit && first && last === ''">Please give us your last name!</div>
-        </div>
-        <div class="input-container">
-          <input id="email" name="email" v-model="email" placeholder="Email Address" type="email"></input>
-          <div class="form-error" v-show="attemptedSubmit && first && last && email === ''">We need your email to email you!</div>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-    <div class="home-section" id="get-involved">
-      <div class="home-section-heading">Upcoming events</div>
-      <iframe id="calendar"
-        src="https://luma.com/embed/calendar/cal-sw8QA8WDE2Uz9J4/events"
-        frameborder="0"
-        style="border: 1px solid #bfcbda88; border-radius: 4px;"
-        aria-hidden="false"
-        tabindex="0"
-      ></iframe>
-    </div>
     <div class="home-section" id="learn-more">
       <div class="home-section-heading">A little bit about us...</div>
-      <div class="content-box" style="display: flex; flex-direction: column;">
-        <p>Hey there!</p>
-        <p>We are a new NYC-based grassroots community for Resisting Automated Disempowerment (RAD) caused by AI and Big Tech. We just launched this month on July 11. If you want to check out the vibes firsthand, please register for one of our upcoming events on the Luma calendar above and pull up!</p>
+      <div class="doodle-box" style="display: flex; flex-direction: column;">
+        <p>Whattup peeps!</p>
+        <p>We are a new NYC-based grassroots community for <span class="orange-light">Resisting Automated Disempowerment (RAD)</span> caused by AI and Big Tech. We just launched on July 11, 2026. If you want to check out the vibes firsthand, please register for one of our upcoming events on the Luma calendar below and pull up!</p>
         <p><strong>Join us to help shape a future worth living in!</strong></p>
-        <p style="text-align: center;">You can read more <a href="/about">here</a>.</p>
-        <!-- <img class="doodle-divider" src="/hr-doodle.svg" alt=""/> -->
+        <p style="text-align: center;">You can read more about us <a href="/about">here</a>.</p>
+        <img class="doodle-divider" src="/hr-doodle.svg" alt=""/>
+        <p>Also, not to get political, but... well... actually, that's kinda the whole point...</p>
+        <p><strong>...Because we've just released our policy platform!</strong></p>
+        <p style="text-align: center;">You can read up on that on our <a href="/policy">brand-new policy page</a>!</p>
+        
       </div>
     </div>
+    
+    <div class="home-section" id="get-involved">
+      <div class="home-section-heading">Upcoming events</div>
+      <div class="events-calendar-container animated-border">
+        <iframe id="calendar"
+          src="https://luma.com/embed/calendar/cal-sw8QA8WDE2Uz9J4/events"
+          frameborder="0"
+          style="border: 1px solid #bfcbda88; border-radius: 4px;"
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="home-section" id="mailing-list">
+      <div class="home-section-heading">Keep in touch!</div>
+      <div class="doodle-box">
+        <form id="mailing-list-form" @submit.prevent="subscribeToMailingList(email,first,last)">
+          <div>Subscribe to our mailing list :)</div>
+          <div class="input-container">
+            <input id="first" name="first" v-model="first" placeholder="First Name"></input>
+            <div class="form-error" v-show="attemptedSubmit && first === ''">Please let us know who you are!</div>
+          </div>
+          <div class="input-container">
+            <input id="last" name="last" v-model="last" placeholder="Last Name"></input>
+            <div class="form-error" v-show="attemptedSubmit && first && last === ''">Please give us your last name!</div>
+          </div>
+          <div class="input-container">
+            <input id="email" name="email" v-model="email" placeholder="Email Address" type="email"></input>
+            <div class="form-error" v-show="attemptedSubmit && first && last && email === ''">We need your email to email you!</div>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    
     <div class="home-section">
       <img style="margin: auto;" src="@/assets/hammer.gif" alt=""/>
       <p style="max-width: 320px; text-align: center; margin: auto">Our website is <i>always</i> under construction! We are continuing to add content to the site as we grow this community.</p>
@@ -85,6 +96,7 @@
 #mailing-list-form {
   width: 100%;
   max-width: 400px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -126,17 +138,7 @@
   width: 100%;
   height: 400px;
   background: white;
-}
-.content-box {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 32px;
-  border-style: solid;
-  border-width: 10px;
-  border-image: url(/border-large.svg) 10 10 10 10 stretch stretch;
-  background: white;
-  border-radius: 10px;
+  margin-bottom: -7px;
 }
 p {
   color: #333;
@@ -152,13 +154,6 @@ p {
   font-weight: 600;
 }
 
-.doodle-divider {
-  display: block;
-  width: 60%;
-  margin: 16px auto;
-  opacity: 0.6;
-}
-
 @media (max-width: 768px) {
   .home-top {
     flex-direction: column;
@@ -167,9 +162,6 @@ p {
     .home-section-heading {
       font-size: 18px;
     }
-  }
-  .content-box {
-    padding: 20px;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
-	<section v-if="isEventUpcoming" class="announcement">
+	<section v-if="isEventUpcoming" class="announcement animated-border">
 		<h2>RAD Collective Policy Meeting</h2>
-		<p>​Kicking off RAD Collective's legislative and policy efforts! Join to hear about what projects we're tackling next. 
+		<p>Kicking off RAD Collective's legislative and policy efforts! Join to hear about what projects we're tackling next. 
 			<!-- <RouterLink class="morelink" to="/htmlDay2026">learn more</RouterLink> -->
 		</p>
 		<div>
@@ -27,24 +27,7 @@ const isEventUpcoming = new Date() < eventEnd;
 	flex-direction: column;
 	gap: 8px;
 	padding: 32px;
-
-	/* animated border */
-	background: 
-		linear-gradient(90deg, var(--color-orange-light) 50%, transparent 50%),
-		linear-gradient(90deg, var(--color-orange-light) 50%, transparent 50%),
-		linear-gradient(0deg, var(--color-orange-light) 50%, transparent 50%),
-		linear-gradient(0deg, var(--color-orange-light) 50%, transparent 50%);
-	background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-	background-size: 16px 4px, 16px 4px, 4px 16px, 4px 16px;
-	animation: movingBorder 8s linear infinite;
 }
-
-@keyframes movingBorder {
-  0%   {background-position: 0px 0px, 200px 100%, 0px 200px, 100% 0px;}
-  50%  {background-position: 200px 0px, 0px 100%, 0px 0px, 100% 200px;}
-  100% {background-position: 0px 0px, 200px 100%, 0px 200px, 100% 0px;}
-}
-
 .event-detail {
 	display: flex;
 	gap: 8px;
