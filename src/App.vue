@@ -27,7 +27,7 @@
         <hr>
         <RouterLink class="header-nav-link" to="/about" @click="hideMobileNav()">ABOUT US</RouterLink>
         <hr>
-        <RouterLink class="header-nav-link" to="/policy">POLICY</RouterLink>
+        <RouterLink class="header-nav-link" to="/policy" @click="hideMobileNav()">POLICY</RouterLink>
         <hr>
         <RouterLink class="header-nav-link" to="/blog" @click="hideMobileNav()">BLOG</RouterLink>
         <hr>
