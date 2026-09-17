@@ -25,6 +25,9 @@
           aria-hidden="false"
           tabindex="0"
         ></iframe>
+        <div class="follow-message">
+          Follow our events calendar <a href="https://luma.com/radcollectivenyc" target="_blank">here</a>!
+        </div>
       </div>
     </div>
 
@@ -59,8 +62,6 @@
 
 <script setup>
   import { ref } from 'vue'
-  import Announcement from '@/components/Announcement.vue'
-
   const email = ref('')
   const first = ref('')
   const last = ref('')
@@ -140,6 +141,15 @@
   background: white;
   margin-bottom: -7px;
 }
+.follow-message {
+  background: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 16px;
+}
+
+
 p {
   color: #333;
   margin-bottom: none;
