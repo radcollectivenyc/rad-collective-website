@@ -29,11 +29,11 @@
             <div class="note">No email app? Copy these into Gmail or any email.</div>
             <div><strong>To:</strong> {{ member.email }}</div>
             <div><strong>Subject:</strong> {{ subject }}</div>
-            <div class="email-body">{{ body }}</div>
+            <div v-html="bodyHtml"></div>
             <div class="copy-buttons">
               <button type="button" @click="copy(member.email, 'email')">{{ copied === 'email' ? 'Copied!' : 'Copy email address' }}</button>
               <button type="button" @click="copy(subject, 'subject')">{{ copied === 'subject' ? 'Copied!' : 'Copy subject' }}</button>
-              <button type="button" @click="copy(body, 'body')">{{ copied === 'body' ? 'Copied!' : 'Copy message' }}</button>
+              <button type="button" @click="copy(body, 'body', bodyHtml)">{{ copied === 'body' ? 'Copied!' : 'Copy message' }}</button>
             </div>
           </div>
         </template>
@@ -113,13 +113,22 @@ const pickAddress = async (suggestion: any) => {
   lookupFailed.value = !member.value
 }
 
-const copy = async (text: string, what: string) => {
-  await navigator.clipboard.writeText(text)
+// Copies as formatted text when html is given, so the letter link pastes as a text link
+const copy = async (text: string, what: string, html?: string) => {
+  try {
+    await navigator.clipboard.write([new ClipboardItem({
+      'text/plain': new Blob([text], { type: 'text/plain' }),
+      ...(html && { 'text/html': new Blob([html], { type: 'text/html' }) }),
+    })])
+  } catch {
+    await navigator.clipboard.writeText(text)
+  }
   copied.value = what
   setTimeout(() => copied.value = '', 2000)
 }
 
 const subject = 'Comments on City Council Bills ahead of Monday’s AI Hearing (RAD Collective)'
+const letterUrl = 'https://radnyc.net/RAD-Letter-to-NYC-Council.pdf'
 
 const body = computed(() => {
   const district = `Council District ${member.value?.district}`
@@ -130,11 +139,20 @@ I live in ${where} and I am concerned about the risks AI models pose to myself a
 
 I am writing in support of RAD Collective NYC, a coalition of local constituents, ahead of the October 5 Committee of the Whole hearing on AI. We strongly support the Council’s leadership in regulating automated systems and wanted to share our technical feedback on the bills introduced.
 
-Please review RAD’s published analysis on their website: https://radnyc.net/policy/letter-to-city-council. Thank you for taking the time to review my feedback ahead of the hearing.
+Please review RAD’s published analysis on their website: ${letterUrl}. Thank you for taking the time to review my feedback ahead of the hearing.
 
 Best regards,
-${name.value || '[Your Name]'}`
+${name.value || '[Your Name]'}
+RAD Collective NYC | https://radnyc.net`
 })
+
+// Same email as HTML, with the letter URL as a text link
+const bodyHtml = computed(() => body.value
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(letterUrl, `<a href="${letterUrl}">RAD Letter to NYC Council - AI Hearing</a>`)
+  .replace(/\n/g, '<br>'))
 
 const mailtoLink = computed(() => `mailto:${member.value?.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body.value)}`)
 </script>
@@ -224,9 +242,6 @@ const mailtoLink = computed(() => `mailto:${member.value?.email}?subject=${encod
     height: 18px;
     width: 18px;
   }
-}
-.email-body {
-  white-space: pre-wrap;
 }
 .copy-buttons {
   display: flex;
