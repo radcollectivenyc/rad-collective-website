@@ -1,5 +1,8 @@
 <template>
   <div id="about">
+    <div class="doodle-box">
+      <p>On October 5, 2026, the New York City Council convened a rare Committee of the Whole hearing on AI. We strongly support the Council’s leadership in regulating automated systems and wanted to share our technical feedback on the bills introduced. See our letter to the council <RouterLink to="/policy/letter-to-city-council">here</RouterLink>!</p>
+    </div>
     <div class="section" id="employment">
       <div class="section-heading">Why?</div>
       <div class="section-content">
@@ -43,6 +46,10 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { RouterLink } from 'vue-router'
+</script>
 
 <style scoped lang="scss">
 #about {

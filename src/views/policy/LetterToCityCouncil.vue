@@ -136,12 +136,12 @@
       <div class="letter-heading">Conclusions</div>
       <p>We thank the Council for challenging the AI industry’s status quo of hubristic self-governance, and meeting this moment with sober urgency. We hope that this hearing launches fruitful collaboration with our constituent group to help push the moral frontier of AI policy.</p>
     </div>
-    <img class="letter-photo" src="@/assets/rad_launch.jpg" alt="RAD Collective members at our launch picnic"/>
     <p>
       Sincerely,<br>
       Resisting Automated Disempowerment (RAD) Collective<br>
       <a href="https://radnyc.net">radnyc.net</a> | <a href="https://www.instagram.com/radcollectivenyc" target="_blank">@radcollectivenyc</a>
     </p>
+    <img class="letter-photo" src="@/assets/rad_launch.jpg" alt="RAD Collective members at our launch picnic"/>
   </div>
 </template>
 
