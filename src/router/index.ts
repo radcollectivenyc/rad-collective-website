@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
 import PolicyView from '@/views/PolicyView.vue'
+import LetterToCityCouncil from '@/views/policy/LetterToCityCouncil.vue'
 import BlogView from '@/views/BlogView.vue'
 import CallingAllMembersArticle from '@/views/blog/CallingAllMembersArticle.vue'
 import NycGrassrootsAiSafetyArticle from '@/views/blog/NycGrassrootsAiSafetyArticle.vue'
@@ -25,6 +26,11 @@ const router = createRouter({
       path: '/policy',
       name: 'policy',
       component: PolicyView,
+    },
+    {
+      path: '/policy/letter-to-city-council',
+      name: 'letter-to-city-council',
+      component: LetterToCityCouncil,
     },
     {
       path: '/blog',
