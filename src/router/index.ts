@@ -24,18 +24,38 @@ const router = createRouter({
     },
     {
       path: '/policy',
-      name: 'policy',
-      component: PolicyView,
-    },
-    {
-      path: '/policy/letter-to-city-council',
-      name: 'letter-to-city-council',
-      component: LetterToCityCouncil,
+      children: [
+        {
+          path: '',
+          name: 'policy',
+          component: PolicyView,
+        },
+        {
+          path: 'letter-to-city-council',
+          name: 'letter-to-city-council',
+          component: LetterToCityCouncil,
+        },
+      ],
     },
     {
       path: '/blog',
-      name: 'blog',
-      component: BlogView,
+      children: [
+        {
+          path: '',
+          name: 'blog',
+          component: BlogView,
+        },
+        {
+          path: 'calling-all-members',
+          name: 'calling-all-members',
+          component: CallingAllMembersArticle,
+        },
+        {
+          path: 'nyc-grassroots-ai-safety',
+          name: 'nyc-grassroots-ai-safety',
+          component: NycGrassrootsAiSafetyArticle,
+        },
+      ],
     },
     {
       path: '/power-map',
@@ -46,16 +66,6 @@ const router = createRouter({
       path: '/htmlDay2026',
       name: 'html-day-2026',
       component: HtmlDay2026,
-    },
-    {
-      path: '/blog/calling-all-members',
-      name: 'calling-all-members',
-      component: CallingAllMembersArticle,
-    },
-    {
-      path: '/blog/nyc-grassroots-ai-safety',
-      name: 'nyc-grassroots-ai-safety',
-      component: NycGrassrootsAiSafetyArticle,
     }
   ],
   scrollBehavior(to, from, savedPosition) {
