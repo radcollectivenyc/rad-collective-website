@@ -4,6 +4,7 @@ import AboutView from '@/views/AboutView.vue'
 import PolicyView from '@/views/PolicyView.vue'
 import LetterToCityCouncil from '@/views/policy/LetterToCityCouncil.vue'
 import EmailCouncilMember from '@/views/policy/EmailCouncilMember.vue'
+import Event20261005Testimony from '@/views/policy/Event20261005Testimony.vue'
 import BlogView from '@/views/BlogView.vue'
 import CallingAllMembersArticle from '@/views/blog/CallingAllMembersArticle.vue'
 import NycGrassrootsAiSafetyArticle from '@/views/blog/NycGrassrootsAiSafetyArticle.vue'
@@ -40,6 +41,11 @@ const router = createRouter({
           path: 'email-your-council-member',
           name: 'email-your-council-member',
           component: EmailCouncilMember,
+        },
+        {
+          path: '2026-10-05-testimony',
+          name: '2026-10-05-testimony',
+          component: Event20261005Testimony,
         },
       ],
     },

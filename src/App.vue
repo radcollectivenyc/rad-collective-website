@@ -41,9 +41,11 @@
       </div>
     </div>
   </header>
+
   <div id="router-view-container">
     <RouterView/>
   </div>
+
   <footer>
     <div class="skyline-img-container">
       <img class="skyline-img" src="@/assets/nyc_skyline.png" alt="NYC skyline pixel art" />
