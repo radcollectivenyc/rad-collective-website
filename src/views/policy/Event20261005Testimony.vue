@@ -8,8 +8,8 @@
         <p>See our letter to the council <RouterLink to="/policy/letter-to-city-council">here</RouterLink>!</p>
         <p>Council Member and Committee on on Technology Chair De La Rosa (left) and Bryce (Right):</p>
         <div class="side-by-side">
-          <img src="@/assets/2026-10-05-chair-de-la-rosa.png" alt="Description of photo" />
-          <img src="@/assets/2026-10-05-bryce-testimony.png" alt="Description of photo" />
+          <img src="@/assets/2026-10-05-chair-de-la-rosa.png" alt="Chair De La Rosa" />
+          <img src="@/assets/2026-10-05-bryce-testimony.png" alt="Bryce :D" />
         </div>
 
       </div>
@@ -37,7 +37,7 @@
           <p>All of this is to say: <strong>democracy is the only righteous path forward</strong>. AI is built on the work of many, and its fate oughtn’t be dictated by a few self-regulating executives, regardless of how their spokespeople reassure us over Zoom.</p>
           <p>In this spirit, we again thank the Council for convening this forum of local Democracy, and implore you to foreground the diverse constituent voices of New York City in your legislation. RAD wrote a letter to the Council with input on the 10 Introductions proposed, that I’d love for you to check out if you haven’t already.</p>
           <p>We look forward to advancing the Moral Frontier of AI policy, together.</p>
-
+          <img src="@/assets/2026-10-05-city-hall.jpg" alt="RAD takes City Hall >:)"/>
         </div>
       </div>
     </div>
