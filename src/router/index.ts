@@ -5,6 +5,7 @@ import PolicyView from '@/views/PolicyView.vue'
 import LetterToCityCouncil from '@/views/policy/LetterToCityCouncil.vue'
 import EmailCouncilMember from '@/views/policy/EmailCouncilMember.vue'
 import Event20261005Testimony from '@/views/policy/Event20261005Testimony.vue'
+import Event20261016Testimony from '@/views/policy/Event20261016Testimony.vue'
 import BlogView from '@/views/BlogView.vue'
 import CallingAllMembersArticle from '@/views/blog/CallingAllMembersArticle.vue'
 import NycGrassrootsAiSafetyArticle from '@/views/blog/NycGrassrootsAiSafetyArticle.vue'
@@ -47,6 +48,11 @@ const router = createRouter({
           name: '2026-10-05-testimony',
           component: Event20261005Testimony,
         },
+        {
+          path: '2026-10-16-testimony',
+          name: '2026-10-16-testimony',
+          component: Event20261016Testimony,
+        }
       ],
     },
     {
